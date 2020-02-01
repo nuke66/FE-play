@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="./js/lib/jquery-3.3.1.min.js" type="text/javascript"></script>
+  <script src="./js/lib/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../src/js/saving-calculator.js"></script>
+  <!-- <script src="js/site.js" type="text/javascript"></script> -->
+  <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/site.css">
+</head>
+<body>
+    <a href="../index.html">back</a>
+    <section class="saver-calculator">
+      <h2>CALCULATOR</h2>
+      <div>
+        <!-- LHS -->
+        <div class="lhs-container">
+          <h3>Expenses</h3>
+          <div class="expenses-container">
+            <!-- Entertainment -->
+            <div class="expense-line">
+              <div class="expense">
+                <div>
+                  <label id="sc-label-0" for="sc-range-0">Entertainment</label>
+                  <span id='sc-expense-0'>0</span>
+                </div>
+                <input id="sc-range-0" type="range" min="0" max="1000" step="10" value="0" d-seq-no="0" d-pc="0.2" />
+              </div>
+              <div class="saving">
+                <span id="sc-saving-0">0</span>
+              </div>
+            </div>
+            <!-- Food -->
+            <div class="expense-line">
+              <div class="expense">
+                <div>
+                  <label id="sc-label-1" for="sc-range-1">Food</label>
+                  <span id='sc-expense-1'>0</span>
+                </div>
+                <input id="sc-range-1" type="range" min="0" max="1000" step="10" value="0" d-seq-no="1" d-pc="0.15" />
+              </div>
+              <div class="saving">
+                <span id="sc-saving-1">0</span>
+              </div> 
+            </div>
+            <!-- Travel -->
+            <div class="expense-line">
+              <div class="expense">
+                <div>
+                  <label id="sc-label-2" for="sc-range-2">Travel</label>
+                  <span id='sc-expense-2'>0</span>
+                </div>
+                <input id="sc-range-2" type="range" min="0" max="1000" step="10" value="0" d-seq-no="2" d-pc="0.1" />
+              </div>
+              <div class="saving">
+                <span id="sc-saving-2">0</span>
+              </div>
+            </div>
+            <!-- Vehicle -->
+            <div class="expense-line">
+              <div class="expense">
+                <div>
+                  <label id="sc-label-3" for="range-3">Vehicle</label>
+                  <span id='sc-expense-3'>0</span>
+                </div>
+                <input id="sc-range-3" type="range" min="0" max="1000" step="10" value="0" d-seq-no="3" d-pc="0.15" />
+              </div>
+              <div class="saving">
+                <span id="sc-saving-3">0</span>
+              </div>
+            </div>
+            <!-- end -->
+          </div>
+    
+        </div>
+    
+        <!-- RHS -->
+        <div class="rhs-container">
+          <h3>Savings</h3>
+          <div class="saving-container">
+            <div class="summary"><span id="sc-saving-monthly">0.00</span>per month</div>
+            <span class="pp-lines">or</span>
+            <div class="summary"><span id="sc-saving-yearly">0.00</span>per year</div>
+            <button id="sc-info-button" type="button">
+              <span>MORE INFO</span>
+            </button>
+            <button id="sc-signup-button" type="button">
+              <span>SIGN UP NOW</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="cards-container">
+        <div>
+          <h3>Linked Cards</h3>
+          <p>Number of credit cards</p>
+        </div>
+        <div class="dropdown-container">
+          <select id="sc-linked-cards">
+            <option value="1.05">1</option>
+            <option value="1.1">2</option>
+            <option value="1.15">3</option>
+            <option value="1.2">4</option>
+            <option value="1.25">5</option>
+          </select>
+        </div>
+      </div>
+    </section>
+    <script src="../src/js/saving-calculator.js"></script>
+</div>
+</body>
+</html>

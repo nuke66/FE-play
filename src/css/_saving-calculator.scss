@@ -1,0 +1,293 @@
+// FIX Initial range slider stylings until component put in
+
+  
+  .saver-calculator {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width:600px;
+    margin: 0 auto;
+  
+    h2 {
+      text-align: center;
+    }
+  
+    h3 {
+      text-align: center;
+      font-size: 20px;
+      text-transform: initial;
+      font-weight: bold;
+    }
+    // container for main content
+    >div{
+      display: flex;
+      flex-direction: row;
+      // LHS column
+      .lhs-container {
+        display: flex;
+        flex-direction: column;
+        flex-grow:1;
+  
+        .expenses-container {
+          .expense-line {
+            display: flex;
+  
+            .expense {
+              padding: 5px 0 15px 0;
+              min-width: 300px; // FIX clean up
+  
+              div {
+                display: flex;
+  
+                label {
+                  display: block;
+                  font-weight: 500;
+                }
+                // slider label
+                span {
+                  margin-left: auto;
+                  font-weight: bold;
+                  // slider value
+                  &:before {
+                    content:'$';
+                    display:inline;
+                    position:relative;
+                    font-weight:bold;
+                  }
+                }
+              }
+              // range slider
+              input[type="range"] {
+                display: block;
+                width: 100%;
+              }
+            }
+            // saving $ amount
+            .saving {
+              border:2px solid gray;
+              display:flex;
+              flex-direction:column;
+              justify-content:center;
+              position:relative;
+              padding:0;
+              height:50px;
+              width:80px;
+              margin:5px 20px;
+              background-color:white;
+              border-radius: 10px 0 0 10px;
+      
+              > span {
+                display: block;
+                position: relative;
+                text-align: right;
+                padding-top:5px;
+                padding-right:5px;
+                font-size:18px;
+                font-weight: 700;
+        
+                &:before {
+                  content:"$";
+                  display:inline-block;
+                  position:relative;
+                  //left:0px;
+                }
+              }
+              
+              &:before {
+                content:"+";
+                display:block;
+                position:absolute;
+                width:20px;
+                height:20px;
+                font-weight:700;
+                color: white;
+                background-color:green;
+                border-radius:999px;
+                top:15px;
+                left:-10px;
+                padding-left:6px;
+                padding-bottom:1px;
+                margin:0;  // remove
+              }
+            }
+          }
+        }
+      }
+      // RHS column
+      .rhs-container{
+        display: flex;
+        flex-direction: column;
+  
+        // Savings totals
+        .saving-container{
+          display: flex;
+          flex-direction: column;
+          flex-grow:1;
+          justify-content: space-evenly;
+          min-height: 300px;
+          min-width:200px;
+          color: #FFF;
+          background-color: green; // FIX color code
+          border: green solid 1px; // FIX color code
+          border-radius: 5px;
+          text-align:center;
+          // Style totals and text
+          .summary {
+            font-size: 12px;
+            font-weight: bold;
+            > span {
+              display: block;
+            }
+          }
+          // Totals
+          #sc-saving-monthly,
+          #sc-saving-yearly {
+            font-size: 26px;
+            &:before{
+              content:'$';
+              position: relative;
+              display:inline-block;
+            }
+          }
+  
+          // Buttons
+          > button {
+            //margin: 5px 10px;
+            font-size: 14px;
+            // More info button
+            &#sc-info-button {
+              opacity: 1; // REMOVE uncessary
+            }
+  
+            // Signup now button
+            &#sc-signup-button {
+              color: green; //FIX color code
+              background-color: white ; //FIX color code
+            }
+          }
+        }
+      }
+    }
+  
+    // number of linked CC's
+    .cards-container {
+      display:flex;
+      flex-direction: row;
+      max-width: 350px; // FIX
+  
+      h3 {
+        text-align: left;
+      }
+  
+      .dropdown-container {
+        margin-left: auto;
+      }
+    }
+  
+  
+    // Add pre/post lines on element
+    span.pp-lines{
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      height: 25px;
+      width: 25px;
+      color: green;
+      background-color: white;
+      border-radius: 1000px;
+      padding: 0;
+      font-weight: 700;
+  
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        color: white;
+        border: 1px solid white;
+        top: 12px;
+        right: 30px;
+        width: 45px;
+        height: 2px;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        color: white;
+        top: 12px;
+        left: 30px;
+        border: 1px solid white;
+        height: 2px;
+        width: 45px;
+      }
+    }
+  
+    // candidate for common styling or mixin
+    button {
+      position: relative;
+      background-color:green;
+      color:white;
+      font-weight:700;
+      border: 2px white solid;
+      border-radius: 1000px;
+      overflow:hidden;
+      margin:5px auto 0 auto;
+      padding:5px 5px;
+      min-width:130px;
+      color:white; 
+      opacity:1;
+  
+      &:before {
+        content:"";
+        display:block;
+        position:absolute;
+        top:0px;
+        left:0px;
+        height:100%;
+        width:100%;
+        z-index:1;
+      }
+  
+      &:hover:before {
+        background-color:rgba(0,0,0,0.2);
+      }
+  
+      > span {
+        position: relative;
+        z-index: 2;
+        opacity:1;
+      }
+    }
+
+    // crap styling get rid of this
+    input[type=range]{
+        -webkit-appearance: none;
+      }
+      
+      input[type=range]::-webkit-slider-runnable-track {
+        width: 300px;
+        height: 5px;
+        background: red;
+        border: none;
+        border-radius: 3px;
+      }
+      
+      input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: black 1px solid;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: red;
+        margin-top: -4px;
+      }
+      
+      input[type=range]:focus {
+        outline: none;
+      }
+      
+      input[type=range]:focus::-webkit-slider-runnable-track {
+        background: red;
+      }    
+  }
+  
