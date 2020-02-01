@@ -1,0 +1,19 @@
+{
+  "name": "fe-play",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0",
+    "popper.js": "^1.16.0",
+    "rangeslider.js": "^2.3.3",
+    "validate": "^5.1.0"
+  }
+}
