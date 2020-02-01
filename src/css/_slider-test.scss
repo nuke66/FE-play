@@ -10,43 +10,7 @@
 
     // rangeslider stylings
 
-    .rangeslider {
-        opacity:1;
-        color:red;
-
-
-    }
-    .rangeslider__fill {
-        background: red;
-    }
-    .rangeslider--horizontal {
-        height:6px;
-
-        .rangeslider__handle {
-            top: -14px;
-        }
-    }
-
-    .rangeslider__handle{
-        background-color:red;
-        border-color:red;
-        background-image: url("../../build/icons8-menu-32.png");
-        width: 35px;
-        height: 35px;
     
-        
-        &:after{
-            display:none;
-        }
-
-        &:active {
-            background-image: url("../../build/icons8-menu-32.png");
-            background-color: lightblue;
-            border-color: lightblue;
-        }
-
-    }
-
 
     // .rangeslider--disabled{
     //     opacity:1;
@@ -74,4 +38,39 @@
     //     border: 1px solid black;
     // }
 
+}
+.custom {
+    .rangeslider {
+        opacity:1;
+        color:red;
+    }
+    .rangeslider__fill {
+        background: red;
+    }
+    .rangeslider--horizontal {
+        height:6px;
+    
+        .rangeslider__handle {
+            top: -9px;
+        }
+    }
+    
+    .rangeslider__handle{
+        background-color:red;
+        border-color:red;
+        background-image: url("../../build/icons8-menu-32.png");
+        width: 25px;
+        height: 25px;
+    
+        
+        &:after{
+            display:none;
+        }
+    
+        &:active {
+            background-image: url("../../build/icons8-menu-32.png");
+            background-color: lightblue;
+            border-color: lightblue;
+        }
+    }
 }
